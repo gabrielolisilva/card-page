@@ -103,4 +103,5 @@ body {
   color: white;
   padding: 15px 120px;
   border-radius: 7px;
+  cursor: pointer;
 }

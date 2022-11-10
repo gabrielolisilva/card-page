@@ -25,32 +25,50 @@
       <div class="rightPart">
         <div class="form">
           <h5>Titular do Cartão</h5>
-          <input type="text" name="text" placeholder="NOME DO TITULAR" />
+          <input
+            type="text"
+            name="text"
+            id="nameCard"
+            placeholder="NOME DO TITULAR"
+          />
 
           <h5>Número do Cartão</h5>
           <input
             type="number"
             name="number"
+            id="numberCard"
             placeholder="1234 5678 9123 0000"
           />
 
           <div class="bottomForms">
             <div class="validadeDiv">
               <h5>Validade</h5>
-              <input type="number" name="date" placeholder="MM" />
-              <input type="number" name="date" placeholder="YY" />
+              <input
+                type="number"
+                name="date"
+                id="mounthValid"
+                placeholder="MM"
+              />
+              <input
+                type="number"
+                name="date"
+                id="yearValid"
+                placeholder="YY"
+              />
             </div>
             <div class="cvcDiv">
               <h5>CVC</h5>
-              <input type="number" name="cvc" placeholder="123" />
+              <input type="number" name="cvc" id="cvcCard" placeholder="123" />
             </div>
           </div>
 
           <div class="buttonDiv">
-            <button>Confirmar</button>
+            <button type="submit" class="submitButton">Confirmar</button>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
