@@ -1,10 +1,15 @@
 const submitButton = document.querySelector(".submitButton");
 
-const nameCard = document.querySelector("#nameCard");
-const numberCard = document.querySelector("#numberCard");
-const mounthValid = document.querySelector("#mounthValid");
-const yearValid = document.querySelector("#yearValid");
-const cvcCard = document.querySelector("#cvcCard");
+const nameInput = document.querySelector("#nameCard");
+const numberInput = document.querySelector("#numberCard");
+const mounthInput = document.querySelector("#mounthValid");
+const yearInput = document.querySelector("#yearValid");
+const cvcInput = document.querySelector("#cvcCard");
+
+const cardNumber = document.querySelector(".cardNumber");
+const cardName = document.querySelector(".cardName");
+const cardValid = document.querySelector(".cardValid");
+const cardCVC = document.querySelector(".cardCVC");
 
 let camposInvalidos = false;
 
@@ -13,30 +18,37 @@ function mensagemNaTela(msg) {
 }
 
 submitButton.addEventListener("click", () => {
-  if (nameCard.value.length === 0) {
+  if (nameInput.value.length === 0) {
     mensagemNaTela("Nome do titular faltando ou inválido");
     camposInvalidos = true;
   }
 
-  if (numberCard.value.length === 0) {
+  if (numberInput.value.length === 0) {
     mensagemNaTela("Número faltando");
     camposInvalidos = true;
   }
 
-  if (mounthValid.value.length === 0) {
-    mensagemNaTela("Mês de validade faltando");
+  if (mounthInput.value.length === 0 || mounthValid.value.length > 2) {
+    mensagemNaTela("Mês de validade faltando ou inválido");
     camposInvalidos = true;
   }
 
-  if (yearValid.value.length === 0) {
-    mensagemNaTela("Ano de validade faltando");
+  if (yearInput.value.length === 0 || yearValid.value.length > 2) {
+    mensagemNaTela("Ano de validade faltando ou inválido");
     camposInvalidos = true;
   }
 
-  if (cvcCard.value.length === 0) {
+  if (cvcInput.value.length === 0 || cvcCard.value.length > 3) {
     mensagemNaTela("CVC faltando");
     camposInvalidos = true;
   }
 
-  console.log(camposInvalidos);
+  if (camposInvalidos) return;
+
+  cardNumber.innerHTML = numberInput.value;
+  cardName.innerHTML = nameInput.value;
+  cardValid.innerHTML = `${mounthInput.value}/${yearInput.value}`;
+  cardCVC.innerHTML = cvcInput.value;
+
+  if (camposInvalidos === false) window.alert("Cadastrado com sucesso");
 });
