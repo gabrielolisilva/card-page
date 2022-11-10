@@ -11,6 +11,16 @@
     <div class="container">
       <div class="leftPart">
         <img src="images/bg-main-desktop.png" alt="DesktopImg" />
+        <div class="cardFrontDiv">
+          <img src="images/bg-card-front.png" alt="cardFront" />
+          <h4 class="cardNumber">0000 0000 0000 0000</h4>
+          <h4 class="cardName">Jane Aplle</h4>
+          <h4 class="cardValid">00/00</h4>
+        </div>
+        <div class="cardBackDiv">
+          <img src="images/bg-card-back.png" alt="cardBack" />
+          <h4 class="cardCVC">000</h4>
+        </div>
       </div>
       <div class="rightPart">
         <div class="form">
@@ -24,14 +34,21 @@
             placeholder="1234 5678 9123 0000"
           />
 
-          <h5>Validade</h5>
-          <input type="number" name="date" placeholder="MM" />
-          <input type="number" name="date" placeholder="YY" />
+          <div class="bottomForms">
+            <div class="validadeDiv">
+              <h5>Validade</h5>
+              <input type="number" name="date" placeholder="MM" />
+              <input type="number" name="date" placeholder="YY" />
+            </div>
+            <div class="cvcDiv">
+              <h5>CVC</h5>
+              <input type="number" name="cvc" placeholder="123" />
+            </div>
+          </div>
 
-          <h5>CVC</h5>
-          <input type="number" name="cvc" placeholder="123" />
-
-          <button>Confirmar</button>
+          <div class="buttonDiv">
+            <button>Confirmar</button>
+          </div>
         </div>
       </div>
     </div>

@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -12,6 +17,50 @@
 
 .leftPart {
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.cardFrontDiv {
+  position: absolute;
+  top: 165px;
+  left: 25px;
+}
+
+.cardNumber {
+  position: absolute;
+  top: 130px;
+  left: 31px;
+  color: white;
+  font-size: 2.7rem;
+}
+
+.cardName {
+  position: absolute;
+  top: 200px;
+  left: 35px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.cardValid {
+  position: absolute;
+  top: 200px;
+  left: 360px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.cardBackDiv {
+  position: absolute;
+  top: 430px;
+  left: 65px;
+}
+
+.cardCVC {
+  position: absolute;
+  top: 109px;
+  left: 360px;
+  font-size: 1.3rem;
 }
 
 .rightPart {
@@ -22,4 +71,36 @@
 
 .form h5 {
   margin: 5px 0px;
+  font-size: 1.2rem;
+}
+
+.form input {
+  height: 25px;
+  width: 294px;
+}
+
+.bottomForms {
+  display: flex;
+  gap: 35px;
+}
+
+.bottomForms input {
+  width: 64px;
+}
+
+.cvcDiv input {
+  width: 119px;
+}
+
+.buttonDiv {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.buttonDiv button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 15px 120px;
+  border-radius: 7px;
 }
